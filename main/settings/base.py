@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'drf_yasg',
     'dj_rest_auth',
     'users',
+    'flight',
     # 'debug_toolbar',
 ]
 
@@ -187,4 +188,9 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.TokenAuthentication',
     ]
+}
+
+REST_AUTH_SERIALIZERS = {
+    'TOKEN_SERIALIZER': 'users.serializers.CustomTokenSerializer',
+
 }
